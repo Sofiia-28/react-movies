@@ -30,12 +30,8 @@ export default function MoviesPage() {
             );
           }
           setShowBtn(page < Math.ceil(total_pages / 20));
-          setMovies(prevState => {
-            console.log(prevState);
-            return (
-            [...prevState.concat(results)]
-            )
-          });
+          // setMovies(prevState => [...prevState.concat(results)]);
+          setMovies(results)
         } catch (error) {
           Notiflix.Notify.failure(
             'Oops, something went wrong, try reloading the page'
@@ -46,10 +42,6 @@ export default function MoviesPage() {
       }
     }
     getMovie();
-    return () => {
-      setMovies([]);
-      setPage(1);
-    }
   }, [query, page, id]);
 
   const handleSubmit = newQuery => {
