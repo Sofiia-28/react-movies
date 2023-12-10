@@ -1,0 +1,96 @@
+/* Header */
+
+.header {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+.header-list {
+  display: flex;
+  gap: 20px;
+}
+.header-item {
+  padding: 20px 0;
+
+  font-size: 20px;
+  font-weight: 600;
+  color: black;
+  list-style: none;
+}
+.header-link {
+  color: black;
+}
+.active {
+  color: #9b2d6a;
+}
+
+/* Movie Card */
+.card-wrapper {
+  padding-bottom: 10px;
+}
+.card-back-arrow {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  gap: 5px;
+}
+.card-details-wrapper {
+  display: flex;
+  gap: 40px;
+}
+.card-genres-list {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.card-add-info {
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  padding: 20px 0;
+}
+h4 {
+  margin: 0 0 10px;
+}
+b {
+  display: block;
+}
+.cast-list {
+  padding: 10px 0 10px 40px;
+}
+
+/* Search Bar */
+.searchForm {
+  padding-top: 20px;
+}
+.searchForm-input {
+  width: 300px;
+  height: 20px;
+}
+.searchForm-button {
+  height: 25px;
+  background-color: #ffeaf5;
+  border: 0.5px solid grey;
+  cursor: pointer;
+}
+.searchForm-button:hover {
+  background-color: #9b2d6a;
+  color: white;
+}
+
+/* Button */
+.button {
+  margin: 0 0 40px 40px;
+  height: 25px;
+  background-color: #ffeaf5;
+  border: 0.5px solid grey;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #9b2d6a;
+  color: white;
+}
+
+/* Movie List */
+.movies-list {
+  padding: 10px 0 10px 40px;
+}
