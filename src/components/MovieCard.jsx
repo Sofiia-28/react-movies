@@ -50,11 +50,11 @@ export const MovieCard = ({ movie }) => {
               )}
               {!!genres && genres.length > 0 && (
                 <>
-                <ul className='card-genres-list'>
-                  {genres.map(genre => {
-                    return <li key={genre.id}>{genre.name}</li>;
-                  })}
-                </ul>
+                  <ul className="card-genres-list">
+                    {genres.map(genre => {
+                      return <li key={genre.id}>{genre.name}</li>;
+                    })}
+                  </ul>
                 </>
               )}
             </div>

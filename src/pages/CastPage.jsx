@@ -16,8 +16,8 @@ export default function CastPage() {
     async function getCast() {
       try {
         setIsLoading(true);
-        const initialCast = await fetchCast(params.movieId);
-        setCast(initialCast.cast);
+        const { cast } = await fetchCast(params.movieId);
+        setCast(cast);
       } catch (error) {
         Notiflix.Notify.failure(
           'Oops, something went wrong, try reloading the page'

@@ -14,8 +14,8 @@ export default function ReviewsPage() {
     async function getReviews() {
       try {
         setIsLoading(true);
-        const initialReviews = await fetchReviews(params.movieId);
-        setReviews(initialReviews.results);
+        const { results } = await fetchReviews(params.movieId);
+        setReviews(results);
       } catch (error) {
         Notiflix.Notify.failure(
           'Oops, something went wrong, try reloading the page'

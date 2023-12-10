@@ -6,21 +6,25 @@ import { Loader } from '../components/Loader';
 export const AppLayout = () => {
   return (
     <div>
-      <header className='header'>
+      <header className="header">
         <nav>
-          <ul className='header-list'>
-            <li className='header-item'>
-              <NavLink className='header-link' to="/">Home</NavLink>
+          <ul className="header-list">
+            <li className="header-item">
+              <NavLink className="header-link" to="/">
+                Home
+              </NavLink>
             </li>
-            <li className='header-item'>
-              <NavLink className='header-link' to="/movies">Movies</NavLink>
+            <li className="header-item">
+              <NavLink className="header-link" to="/movies">
+                Movies
+              </NavLink>
             </li>
           </ul>
         </nav>
       </header>
 
       <main>
-        <Suspense fallback={<Loader/>}>
+        <Suspense fallback={<Loader />}>
           <Outlet />
         </Suspense>
       </main>

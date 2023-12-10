@@ -22,8 +22,10 @@ export default function MoviesPage() {
       if (query !== '') {
         try {
           setIsLoading(true);
-          const initialSearch = await fetchMoviesBySearch(query, page);
-          const { results, total_pages } = initialSearch;
+          const { results, total_pages } = await fetchMoviesBySearch(
+            query,
+            page
+          );
           if (results.length === 0) {
             Notiflix.Notify.failure(
               `Oops, no movie with the title "${query}" was found.`
@@ -31,7 +33,7 @@ export default function MoviesPage() {
           }
           setShowBtn(page < Math.ceil(total_pages / 20));
           // setMovies(prevState => [...prevState.concat(results)]);
-          setMovies(results)
+          setMovies(results);
         } catch (error) {
           Notiflix.Notify.failure(
             'Oops, something went wrong, try reloading the page'

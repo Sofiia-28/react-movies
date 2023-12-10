@@ -37,7 +37,7 @@ export default function MoviesDetailsPage() {
         </>
       )}
       <MovieCard movie={movie} />
-      <div className='card-add-info'>
+      <div className="card-add-info">
         <h4>Additional information</h4>
         <ul>
           <li>

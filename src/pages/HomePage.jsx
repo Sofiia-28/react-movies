@@ -12,8 +12,8 @@ export default function HomePage() {
     async function getTrendMovies() {
       try {
         setIsLoading(true);
-        const initialMovies = await fetchMovies();
-        setMovies(initialMovies.results);
+        const { results } = await fetchMovies();
+        setMovies(results);
       } catch (error) {
         Notiflix.Notify.failure(
           'Oops, something went wrong, try reloading the page'
