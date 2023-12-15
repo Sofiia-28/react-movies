@@ -32,8 +32,7 @@ export default function MoviesPage() {
             );
           }
           setShowBtn(page < Math.ceil(total_pages / 20));
-          // setMovies(prevState => [...prevState.concat(results)]);
-          setMovies(results);
+          setMovies(prevState => [...prevState.concat(results)]);
         } catch (error) {
           Notiflix.Notify.failure(
             'Oops, something went wrong, try reloading the page'
@@ -63,7 +62,7 @@ export default function MoviesPage() {
 
       {movies.length > 0 && (
         <>
-          <MovieList movies={movies} />
+          <MovieList movies={movies} link={''}/>
         </>
       )}
       {isLoading && (

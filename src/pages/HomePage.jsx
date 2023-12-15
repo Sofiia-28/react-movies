@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { fetchMovies } from '../api';
-import { TrendMovieList } from '../components/TrendMovieList';
+import { MovieList } from '../components/MovieList';
 import { Loader } from '../components/Loader';
 import Notiflix from 'notiflix';
 
@@ -34,7 +34,7 @@ export default function HomePage() {
           <Loader />
         </>
       )}
-      <TrendMovieList movies={movies} />
+      <MovieList movies={movies} link={'movies/'}/>
     </div>
   );
 }

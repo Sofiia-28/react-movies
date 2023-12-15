@@ -50,7 +50,11 @@ export default function CastPage() {
               return (
                 <li key={id}>
                   <img
-                    src={`${BASE_URL}w200${profile_path}`}
+                    src={
+                      actor?.profile_path
+                        ? `${BASE_URL}w200${profile_path}`
+                        : 'https://user-images.githubusercontent.com/24848110/33519396-7e56363c-d79d-11e7-969b-09782f5ccbab.png'
+                    }
                     alt={`${name} portrait`}
                   />
                   <b>{name}</b>
